@@ -1,5 +1,5 @@
 print("8739519")
-print("10")
+print("10") 
 print("9")
 print("8")
 print("7")
