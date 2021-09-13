@@ -9,6 +9,4 @@ print("4")
 print("3")
 print("2")
 print("1")
-print("blast off!") 
-#hello
-#How are you
+print("blast off!")
