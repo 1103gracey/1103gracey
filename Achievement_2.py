@@ -1,10 +1,12 @@
 print ("please enter the String")
 inputOne = str(input())
 
-if inputOne.upper().isalpha():
-    print(inputOne.lower())
-elif inputOne.lower().isalpha(): 
-    print(inputOne.upper())
+validationVar = inputOne
+
+if validationVar.isalpha():
+    if validationVar.islower():
+        print(str(validationVar.upper()))   
+    else: 
+        print((validationVar.lower()))
 else:
     print("Wrong Input")
-
