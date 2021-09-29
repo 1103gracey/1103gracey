@@ -23,6 +23,11 @@ print ("Enter '1'for polo t-shirt and '2' for t-shirt.")
 # Input of t-shirt is read as per selection.
 choiceType = int(input())
 
+# Here, user needs to enter the total number of t-shirts.
+print ("\nHow many Tshirt do you want?")
+choiceQuantity = int(input())
+
+
 # Here, each string is defined among the categories of t-shirts, with there return message, they are defined when the input from user calls it.
 def Black():
     return "you have selected black colour for your t-shirt."
@@ -62,3 +67,11 @@ def switchType(choiceType):
 
 # Input of t-shirt type is printed as per selection.
 print(switchType(choiceType))
+
+print("You have choosen "+str(choiceQuantity)+" Tshirt")
+
+print("Your total cost of tshirts is: $" + str(choiceQuantity*9.99))
+
+totalCost = choiceQuantity*18
+
+print("Your total cost of t-shirt with HST is $" + str(totalCost))
