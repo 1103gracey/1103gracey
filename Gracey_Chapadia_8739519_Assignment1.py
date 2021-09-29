@@ -16,6 +16,13 @@ print ("1. Black\n2. Blue\n3. Red\n4. Grey")
 # Input of colour is read by the program as per selection.
 choiceColor = int(input())
 
+# User have been provided options for t-shirt .
+print ("\nYou require polo t-shirt or a t-shirt?")
+print ("Enter '1'for polo t-shirt and '2' for t-shirt.")
+
+# Input of t-shirt is read as per selection.
+choiceType = int(input())
+
 # Here, each string is defined among the categories of t-shirts, with there return message, they are defined when the input from user calls it.
 def Black():
     return "you have selected black colour for your t-shirt."
@@ -25,6 +32,10 @@ def Red():
     return "you have selected red colour for your t-shirt"
 def Grey():
     return "you have selected grey colour for your t-shirt"
+def Polo():
+    return "you have selected Polo t-shirt"
+def Tshirt():
+    return "you have selected t-shirt"
 
 # A switcher is supplied for the system that stores and executes t-shirt colours when the user makes a call, controlling the flow of strings.
 switcher = {
@@ -34,9 +45,20 @@ switcher = {
 4: Grey
 }
 
+# For the system, a switcher is provided that stores and executes the t-shirt type when the user makes a call.
+switcher = {
+1: Polo,
+2: Tshirt,
+}
+
 def switchColor(choiceColor):
     return switcher.get(choiceColor, DefaultDict)()
 
 # Input of t-shirt colour is printed as per selection.
 print(switchColor(choiceColor))
 
+def switchType(choiceType):
+    return switcher.get(choiceType, DefaultDict)()
+
+# Input of t-shirt type is printed as per selection.
+print(switchType(choiceType))
