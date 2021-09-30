@@ -43,7 +43,7 @@ def Tshirt():
     return "you have selected t-shirt"
 
 # A switcher is supplied for the system that stores and executes t-shirt colours when the user makes a call, controlling the flow of strings.
-switcher = {
+switcher_one = {
 1: Black,
 2: Blue,
 3: Red,
@@ -51,27 +51,27 @@ switcher = {
 }
 
 # For the system, a switcher is provided that stores and executes the t-shirt type when the user makes a call.
-switcher = {
+switcher_two = {
 1: Polo,
 2: Tshirt,
 }
 
 def switchColor(choiceColor):
-    return switcher.get(choiceColor, DefaultDict)()
-
 # Input of t-shirt colour is printed as per selection.
+    return switcher_one.get(choiceColor, DefaultDict)()
 print(switchColor(choiceColor))
 
 def switchType(choiceType):
-    return switcher.get(choiceType, DefaultDict)()
-
+    return switcher_two.get(choiceType, DefaultDict)()
 # Input of t-shirt type is printed as per selection.
 print(switchType(choiceType))
 
 print("You have choosen "+str(choiceQuantity)+" Tshirt")
 
-print("Your total cost of tshirts is: $" + str(choiceQuantity*9.99))
+# As cost of every t-shirt is $9.99, total number of t-shirts are multiplied with 9.99 to get the amount.
 
-totalCost = choiceQuantity*18
+beforeHSTTotal = choiceQuantity*9.99
+print("Your total cost of tshirts before HST is: $" + str(beforeHSTTotal))
 
-print("Your total cost of t-shirt with HST is $" + str(totalCost))
+# The total cost of t-shirt also including HST with the amount, so that product of that amount is done with 18 to finalize the total cost of tshirts. 
+print("Your total cost of t-shirt with HST is $" + str(beforeHSTTotal*0.13+beforeHSTTotal))
