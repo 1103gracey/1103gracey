@@ -1,3 +1,6 @@
+from collections import defaultdict
+from typing import DefaultDict
+
 # Abby’s Merchandizing (AM) is a very busy place and needs some software to help with orders of clothing
 # This program is introduced to calculate the total shirt cost.
 # Varieties are provided in shirts with differnt colours.
