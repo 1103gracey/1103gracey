@@ -191,14 +191,17 @@ def inputTrouser():
     else:
         print("Thank you for your interest!")
 
+#condition to check input category
 if(choiceClothType == 1):
     inputTshirt()
     totalBeforeDiscTshirt = choiceQuantityTshirt*9.99
     print("Your total cost of tshirts before discount is: $" + str(totalBeforeDiscTshirt))
     
+    #condition to check age category
     if(ageGroupInput == "y" or ageGroupInput == "Y"):
         print("Congratulations you are eligible to get student discount of 10%!")
          
+         #condition to check what discount user will get
         if(choiceQuantityTshirt>=3 and choiceQuantityTrouser < 3):
             print("You are eligible for both discount!")
             studentDisc = totalBeforeDiscTshirt*0.1
@@ -215,6 +218,7 @@ if(choiceClothType == 1):
             print("Your final price after applying both discounts is: $" + str(discAmtTs))
             print("Your final price after adding tax is: $" + str(finalHSTTax))
 
+        #condition to check what discount user will get
         elif(choiceQuantityTshirt<3 and choiceQuantityTrouser >= 3):
             print("You are eligible for both discount!")
             studentDisc = totalBeforeDiscTrouser*0.1
@@ -231,6 +235,7 @@ if(choiceClothType == 1):
             print("Your final price after applying both discounts is: $" + str(discAmtTr))
             print("Your final price after adding tax is: $" + str(finalHSTTax))
 
+        #condition to check what discount user will get
         elif(choiceQuantityTshirt >= 3 and choiceQuantityTrouser >= 3):
             print("You are eligible for both discount!")
             discAmtAll = totalBeforeDiscTrouser + totalBeforeDiscTshirt
@@ -245,6 +250,7 @@ if(choiceClothType == 1):
             print("Your final price after adding tax is: $" + str(finalHSTTax))
     else:
 
+        #condition to check what discount user will get
         if(choiceQuantityTshirt>=3 and choiceQuantityTrouser < 3):
             print("You are eligible for quanity discount!")
             quantityDisc = totalBeforeDiscTshirt*0.15
@@ -260,6 +266,7 @@ if(choiceClothType == 1):
             print("Your final price after applying discount is: $" + str(discAmtTs))
             print("Your final price after adding tax is: $" + str(finalHSTTax))
 
+        #condition to check what discount user will get
         elif(choiceQuantityTshirt<3 and choiceQuantityTrouser >= 3):
             print("You are eligible for quantity discount!")
             quantityDisc = totalBeforeDiscTrouser*0.15
@@ -275,6 +282,7 @@ if(choiceClothType == 1):
             print("Your final price after applying both discounts is: $" + str(discAmtTr))
             print("Your final price after adding tax is: $" + str(finalHSTTax))
 
+        #condition to check what discount user will get
         elif(choiceQuantityTshirt >= 3 and choiceQuantityTrouser >= 3):
             print("You are eligible for quantity discount!")
             discAmtAll = totalBeforeDiscTrouser + totalBeforeDiscTshirt
@@ -285,7 +293,6 @@ if(choiceClothType == 1):
             print("Total price is: $" + (str(totalBeforeDiscTshirt)+(str(totalBeforeDiscTrouser))))
             print("Your final price after applying both discounts is: $" + str(discAmtPrice))
             print("Your final price after adding tax is: $" + str(finalHSTTax))
-
     
 elif(choiceClothType == 2):
     inputTrouser()
