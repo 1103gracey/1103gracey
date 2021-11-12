@@ -24,7 +24,8 @@ class Largestvalue:
     def maxValue(self):
         max = Largestvalue(InputOne, InputTwo, InputThree)
         max.gettingInput()
-        
+
+        #Applying logic using if elif else, comparing value with each other using operator        
         if(max.inputDigitOne > max.inputDigitTwo and max.inputDigitOne>max.inputDigitThree):
             print("Large number is:" + str(max.inputDigitOne))
         elif(max.inputDigitTwo > max.inputDigitOne and max.inputDigitTwo>max.inputDigitThree):
