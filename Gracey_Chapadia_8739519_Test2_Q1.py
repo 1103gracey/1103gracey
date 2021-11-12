@@ -1,7 +1,7 @@
 from typing import DefaultDict
 from collections import defaultdict
 
-#This program will demonstrate the use of object oriented programming with the use of classes.
+#This program will demonstrate the use of object oriented programming with the use of function.
 #This program is done by Gracey Chapadia - 8739519
 
 #defining factorial function for the program
