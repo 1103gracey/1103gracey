@@ -33,6 +33,7 @@ print("\nEnter your choice here: ")
 # Input of colour is read by the program as per selection.
 choiceClothType = int(input())
 
+# Function created to define the object of class.
 objClothType = ClothingType()
 
 switcher_one_cloth_type = {
@@ -74,6 +75,7 @@ def inputTshirt():
     print ("\nHow many Tshirt do you want?")
     print ("\nCurrent offers \n 1. Student will get 10% discount\n If you purchase 3 or more items student and senior will get quantity discount of 15%")
 
+    # Function created to define the object of class.
     choiceQuantityTshirt = int(input())
 
 
@@ -124,6 +126,7 @@ def inputTshirt():
     else:
         print("Thank you for your interest!")
 
+#Class Trouser has been created in which its colour and type are given.
 def inputTrouser():
 
     global choiceQuantityTrouser
