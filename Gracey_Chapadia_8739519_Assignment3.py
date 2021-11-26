@@ -304,10 +304,3 @@ if(choiceClothType == 1):
             print("Your final price after applying both discounts is: $" + str(discAmtPrice))
             print("Your final price after adding tax is: $" + str(finalHSTTax))
     
-elif(choiceClothType == 2):
-    inputTrouser()
-    print(choiceQuantityTrouser)
-    totalBeforeDiscTrouser = choiceQuantityTrouser*11.99
-    print("Your total cost of trousers before discount is: $" + str(totalBeforeDiscTrouser))
-else:
-    print ("Wrong Input!")
