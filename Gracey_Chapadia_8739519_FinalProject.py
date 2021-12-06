@@ -45,7 +45,7 @@ class myQuizeGame:
                 print("Hurrey!\nYou Guess it.\n\n")
                 playerScore += 1
             else:
-                print("SOrry!\nYour answer is wrong.\n\n")
+                print("Sorry!\nYour answer is wrong.\n\n")
         print("\n\nhey, " + str(inu.studentName) + " your score is: " + str(playerScore) + "\n")
         return playerScore
 
@@ -62,7 +62,7 @@ ClassObj = myQuizeGame(sName, listofQuestionAnswer)
 random.shuffle(listofQuestionAnswer)
 myQuizeGame.mainFunction()
 
-#if player won the quize with full score he will get the walmart guftcart.
+#if player won the quize with full score he will get the walmart giftcard.
 if playerScore == 10:
     print("Congratulations, " + sName + "!!!" + "\nYou won the $100 Amazon gift card.")
 else:
