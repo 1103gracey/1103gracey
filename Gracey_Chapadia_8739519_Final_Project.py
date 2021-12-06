@@ -16,7 +16,7 @@ listofQuestionAnswer = [
     ["What is the multiplication of 2*5?:\n",  "10"],
 ]
 
-#define class
+#define class for the OOP concept
 class myQuizeGame:
 
     #define init method for the class
