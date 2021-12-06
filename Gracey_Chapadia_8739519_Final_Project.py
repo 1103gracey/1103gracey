@@ -2,37 +2,43 @@ import random
 #This program will find the area and perimeter of Rect.
 #This program is done by Gracey Chapadia - 8739519
 
+#Making an array for the questions and answers
 listofQuestionAnswer = [
-    ["What star is in the center of the solar system?:\n", "Sun"],
-    ["What is the 3rd planet of the solar system?:\n", "Earth"],
-    ["What can be broken, but is never held?:\n", "Promise"],
-    ["What part of the body you use to smell?:\n", "Nose"],
-    ["How many days in one year?:\n", "365"],
-    ["How many letters in the alphabet?:\n", "26"],
-    ["Rival of Intel?:\n", "AMD"],
-    ["No.8 element on periodic element?:\n", "Oxygen"],
-    ["What is the galaxy that contains our solar system?:\n", "Milky Way"],
-    ["What animal is the king of the jungle?:\n",  "Lion"],
+    ["What is the biggest animal in the world?:\n", "Blue Whale"],
+    ["What is the capital of Canada?:\n", "Ottawa"],
+    ["how many provinces and territories in canada? (In Digits):\n", "10"],
+    ["What does IP stand for?:\n", "Internet Protocol"],
+    ["What's a baby rabbit called?:\n", "Kit"],
+    ["Who painted the Mona Lisa?:\n", "Leonardo da Vinci"],
+    ["How many bones does a shark have?:\n", "None"],
+    ["What grain is the Japanese spirit Sake made from?:\n", "Rice"],
+    ["Who invented the World Wide Web in 1990?:\n", "Tim Berners-Lee"],
+    ["What is the multiplication of 2*5?:\n",  "10"],
 ]
 
+#define class
 class myQuizeGame:
 
+    #define init method for the class
     def __init__(self, studentName, playerData):
         self.studentName = studentName
         self.playerData = playerData
 
-    #getting input
+    #getting input from the player
     def getInput(self):
         f'{self.studentName}'
         f'{self.playerData}'
 
+    #defining main working function for the trivia
     def mainFunction():
         inu = myQuizeGame(sName,listofQuestionAnswer)
         inu.getInput()
 
+        #defining global variable to use it in furture
         global playerScore
         playerScore = 0
 
+        #generating loop and converting answers of players into lowercase for error prevention
         for q, a in inu.playerData:
             playerGuess = input(q)
             if playerGuess.lower() == a.lower():
@@ -44,14 +50,19 @@ class myQuizeGame:
         return playerScore
 
 print("Welcome to the Conestoga College General Knowledge Tuesday Trivia!\n\n")
- 
+
+#getting name as an input from the user
 sName = input("hey condor!\n\nWrite your name here: ")
 print("\n\nYour Quiz has begin...\n\n")
 
+#creating class object
 ClassObj = myQuizeGame(sName, listofQuestionAnswer)
+
+#using random library and shuffle function to shuffle the question and user can see random question every single time.
 random.shuffle(listofQuestionAnswer)
 myQuizeGame.mainFunction()
 
+#if player won the quize with full score he will get the walmart guftcart.
 if playerScore == 10:
     print("Congratulations, " + sName + "!!!" + "\nYou won the $100 Amazon gift card.")
 else:
